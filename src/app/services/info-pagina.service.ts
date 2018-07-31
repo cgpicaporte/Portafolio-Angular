@@ -13,6 +13,7 @@ export class InfoPaginaService {
 
   constructor(private http: HttpClient ) {
 
+    /*
     // console.log('Sevicio de InfoPagina cargado');
 
     // Leer el archivo JSON assets/data/data-pagina.json
@@ -24,7 +25,8 @@ export class InfoPaginaService {
     //       console.log( resp['twitter'] );
     //       console.log( resp );
 
-    //     });
+    //     }); */
+
     this.cargarInfo();
     this.cargarEquipo();
 
@@ -34,10 +36,10 @@ export class InfoPaginaService {
     this.http.get('assets/data/data-pagina.json')
     .subscribe( (resp: InfoPagina) => {
 
-      //this.cargada = true;
+      /* this.cargada = true; */
       this.info = resp;
-      //console.log( resp['twitter'] );
-      //console.log( resp );
+      /* console.log( resp['twitter'] ); */
+      /* console.log( resp ); */
 
     });
 
@@ -48,9 +50,9 @@ export class InfoPaginaService {
     .subscribe( (resp: any[] ) => {
       this.equipo = resp;
       this.cargada = true;
-      //console.log( resp['0'].nombre );
-      //console.log( resp['0']['twitter'] );
-      //console.log( resp );
+      /* console.log( resp['0'].nombre ); */
+      /* console.log( resp['0']['twitter'] ); */
+      /* console.log( resp ); */
     });
    }
 }
